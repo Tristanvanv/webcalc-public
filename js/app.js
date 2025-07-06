@@ -13,7 +13,7 @@ calcbtns.forEach( btns => {
     const value = btns.textContent;
     if (value === "=") {
       const expression = calcinput.value;
-      fetch("http://127.0.0.1:5000/evaluate", {
+      fetch("https://webcalc-hgcv.onrender.com/evaluate", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
