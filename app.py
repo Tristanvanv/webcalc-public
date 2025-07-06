@@ -61,6 +61,10 @@ def evaluate():
         return jsonify({"result": result})
     except Exception as e:
         return jsonify({"error": "Invalid expression"}), 400
+    
+@app.route("/")
+def index():
+    return "Backend is running"
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
